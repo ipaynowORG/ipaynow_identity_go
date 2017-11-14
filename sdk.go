@@ -1,4 +1,4 @@
-package main
+package identity
 
 import (
 	"bytes"
@@ -20,17 +20,6 @@ type App struct {
 	AppId  string
 	AppKey string
 	DesKey string
-}
-
-func main() {
-	app := App{
-		AppId:  "1441071499740581",
-		AppKey: "DK96gnOB7EmVDDaHgLTLEZqVgP0H0nML",
-		DesKey: "abnMX6YXHjBdesCsn2TD8b25",
-	}
-	//查询发送结果(状态报告)
-	var result = IdentityAuth(&app, "张江南", "110101198204031532", "123abcabc")
-	fmt.Println("result = " + result)
 }
 
 /**
