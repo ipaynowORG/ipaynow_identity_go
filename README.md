@@ -45,7 +45,7 @@
 
 <h2 id='2'> 2. API </h2>
 
-使用"go get github.com/ipaynowORG/ipaynow_identity_go/ipaynow_identity" 命令clone 并 install ipaynow_sms模块
+使用"go get github.com/ipaynowORG/ipaynow_identity_go/ipaynow_identity" 命令clone 并 install ipaynow_identity模块
 
 代码中 import (git "github.com/ipaynowORG/ipaynow_identity_go/ipaynow_identity")使用
 
