@@ -20,6 +20,7 @@ type App struct {
 	AppId  string
 	AppKey string
 	DesKey string
+	IsDev  bool
 }
 
 /**
@@ -161,7 +162,13 @@ func query(app *App, postMap map[string]string, funcode string) string {
 	u.Set("message", message)
 
 	//5. post funcode=xxx&message=xxx
-	var result = post("https://dby.ipaynow.cn/identify", "funcode="+funcode+"&"+u.Encode())
+	var url = ""
+	if app.IsDev {
+		url = "https://dby.ipaynow.cn/identify"
+	} else {
+		url = "https://s.ipaynow.cn/auth"
+	}
+	var result = post(url, "funcode="+funcode+"&"+u.Encode())
 
 	//6.基本验证
 	if len(strings.Split(result, "|")) == 2 {
