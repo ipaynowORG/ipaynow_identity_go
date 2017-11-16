@@ -4,6 +4,7 @@
 
 - 1.0.0 : 初稿
 
+- 1.0.1 : 允许客户指定调用生产或测试环境
 
 ## 目录 ##
 
@@ -445,6 +446,7 @@
 			AppId:  "1441071499740581",
 			AppKey: "DK96gnOB7EmVDDaHgLTLEZqVgP0H0nML",
 			DesKey: "abnMX6YXHjBdesCsn2TD8b25",
+			IsDev: false,//true标识调用生产环境,false为调用测试环境
 		}
 		//查询发送结果(状态报告)
 		var result = git.IdentityAuth(&app, "张江南", "110101198204031532", "123abcabc")
